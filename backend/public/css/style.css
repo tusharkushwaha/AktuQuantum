@@ -1,0 +1,237 @@
+*{
+     margin: 0px;
+     padding: 0px;
+     /* box-sizing: border-box; */
+}
+li{
+     list-style: none;
+}
+a{
+     text-decoration: none;
+}
+
+/* -------------------------------------navbar */
+.navbar{
+     
+     background-color: rgb(0, 0, 0);
+    
+    
+}
+.nav_header{
+     /* overflow: auto; */
+     position: fixed;
+     top: 0px;
+     width:100%;
+     
+}
+.img_logo{
+     border: 2px solid yellow;
+     border-radius: 27px;
+}
+.navbar_ul{
+     display: flex;
+     /* justify-content:inherit; */
+     align-items: center;
+     
+     
+     
+}
+.searchcontainer{
+     display: flex;
+     border: 3px solid yellow;
+     border-radius: 9px;
+     margin-left: 20px;
+     padding: 0;
+     height: 32px;
+
+}
+.searchd{
+     border: 2px solid yellow;
+     
+     margin: 0px;
+     padding: 0;
+}
+.searchd > input{
+     height: 31px;
+     border: none;
+     font-size: 17px;
+}
+.searchdimg{
+ background-color: white;
+ 
+ line-height: 43px;;
+}
+
+
+
+.li_itemsb{
+     /* align-self: flex-end; */
+     margin-left: auto;
+}
+
+.div_white{
+     line-height: 8px;
+}
+.btnimg {
+     display: flex;
+     align-items: center;
+     margin: 2px 8px;
+     padding: 3px 12px;
+     border-radius: 9px;
+     border: 5px solid yellow;
+     background-color: white;
+     font-size: 18px;
+     height: 16x;
+ }
+.btnimg:hover{
+     color: red;
+     border: 2px solid rgb(255, 0, 0);
+}
+.btnimg_div{
+     padding: 0px 3px;
+}
+.nav_text{
+     font-family: 'Rock Salt', cursive;
+     margin: 2px 14px;
+     color: yellow;
+     font-weight: bold;
+     font-size: 23px;
+}
+
+/* ----------------main content------------- */
+#body_section{
+     background: rgba(0, 0, 0, 0.7) url("../images/old-books-436498_1280.jpg");
+     background-size: 100vh;
+     background-blend-mode: darken;
+     height: 600px;
+}
+.mainContent{
+     /* background-image:url(../images/old-books-436498_1280.jpg);  */
+     
+     color: white;
+     font-size: 50px;
+     /* margin:40px; */
+     padding: 150px 40px;
+     display: flex;
+     justify-content: center;
+}
+.aktu_text{
+     color: yellow;
+     font-family: 'Rock Salt', cursive;
+     animation: mymove 5s infinite;
+     position: relative;
+     font-weight: bold;
+}
+@keyframes mymove{
+     from{
+          width: 100px;
+     }
+     to{
+          width: 150px;
+     }
+}
+
+
+.main_aktuimg{
+     margin: 0px 26px;
+}
+.logos{
+     display: flex;
+     justify-content: space-evenly;
+}
+
+.logos_div{
+     font-size: 23px;
+     /* display: flex;
+     align-items: center; */
+     color: white;
+}
+.logos_div>div{
+     text-align: center;
+}
+
+.logos_div >span{
+     font-size: 50px;
+     color: yellow;
+     /* width:inherit; */
+     display:block;
+     text-align: center;
+     font-weight: bold;
+     
+}
+
+
+/* -------offer page----------- */
+
+#offer{
+     font-size: 30px;
+     text-align: center;
+     margin: 40px 5px;
+     padding: 18px 0px;
+     background-color: rgb(26, 23, 23);
+     color: yellow;
+     font-weight: bold;
+
+}
+
+.offer{
+     display: flex;
+     justify-content: space-around;
+}
+.offer >div{
+     font-size: 20px;
+     text-align: center;
+     font-weight: bold;
+     color: yellow;
+     /* background-color: rgb(26, 23, 23); */
+}
+.offer_child{
+     width: 300px;
+     height: 170px;
+}
+.offer_child>div{
+     background-color: rgb(26, 23, 23);
+     padding: 5px 0px;
+}
+
+
+
+/* ----------mobile app-------- */
+
+.mobile{
+     display: flex;
+     justify-content:space-between;
+     padding: 10px 10px;
+     margin: 30px 11px;
+     border: 9px solid rgb(26, 23, 23);
+}
+.mobile>span{
+     font-size: 25px;
+     color: white;
+     padding: 10px 116px;
+     background-color: rgb(26, 23, 23);
+     position: relative;
+}
+.mobile>span>span{
+     font-family: 'Rock Salt', cursive ;
+     color: yellow;
+     font-weight: bold;
+
+}
+#download{
+     background-color: rgb(255, 255, 255);
+     color: black;
+     position: absolute;
+     top: 50%;
+     right: 40%;
+     font-size: 20px;
+     padding: 4px;
+     margin: 5px;
+     border: 8px solid yellow;
+     border-radius: 27px;
+}
+
+
+/* - ---------how can we help-------- - */
+
+
