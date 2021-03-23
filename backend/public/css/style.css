@@ -78,7 +78,7 @@ a{
      margin: 2px 8px;
      padding: 3px 12px;
      border-radius: 9px;
-     border: 5px solid yellow;
+     border: 2px solid yellow;
      background-color: white;
      font-size: 18px;
      height: 16x;
@@ -119,7 +119,7 @@ a{
      color: yellow;
      font-family: 'Rock Salt', cursive;
      animation: mymove 5s infinite;
-     position: relative;
+     /* position: relative; */
      font-weight: bold;
 }
 @keyframes mymove{
@@ -169,25 +169,27 @@ a{
      margin: 40px 5px;
      padding: 18px 0px;
      background-color: rgb(26, 23, 23);
-     color: yellow;
+     color: rgb(255, 255, 255);
      font-weight: bold;
 
+}
+#offer>span{
+     font-family: 'Rock Salt', cursive ;
+     color: yellow;
 }
 
 .offer{
      display: flex;
      justify-content: space-around;
 }
-.offer >div{
+
+.offer_child{
+     width: 300px;
+     height: 170px;
      font-size: 20px;
      text-align: center;
      font-weight: bold;
      color: yellow;
-     /* background-color: rgb(26, 23, 23); */
-}
-.offer_child{
-     width: 300px;
-     height: 170px;
 }
 .offer_child>div{
      background-color: rgb(26, 23, 23);
@@ -203,14 +205,15 @@ a{
      justify-content:space-between;
      padding: 10px 10px;
      margin: 30px 11px;
-     border: 9px solid rgb(26, 23, 23);
+     border: 7px solid rgb(26, 23, 23);
 }
 .mobile>span{
      font-size: 25px;
      color: white;
      padding: 10px 116px;
      background-color: rgb(26, 23, 23);
-     position: relative;
+     /* position: relative; */
+     
 }
 .mobile>span>span{
      font-family: 'Rock Salt', cursive ;
@@ -219,19 +222,113 @@ a{
 
 }
 #download{
-     background-color: rgb(255, 255, 255);
+     background-color: rgb(238, 255, 0);
      color: black;
-     position: absolute;
-     top: 50%;
-     right: 40%;
+     text-align: center;
+     margin: 150px 10px;    
+     top:10px;
      font-size: 20px;
      padding: 4px;
-     margin: 5px;
-     border: 8px solid yellow;
-     border-radius: 27px;
+     width: 200px;
+     border: 2px solid yellow;
+     
 }
-
+#download:hover{
+border: 2px solid red;
+}
 
 /* - ---------how can we help-------- - */
 
+.can_help{
+     display: flex;
+     border: 7px solid rgb(26, 23, 23);
+     padding: 10px 10px;
+     margin: 30px 11px;
 
+}
+.can_help>div>ul{
+     padding: 20px 42px;
+     margin: 20px 21px;
+     font-size: 18px;
+}
+.can_help>div>ul>li{
+ padding: 8px;    
+}
+
+#can_help_h4{
+     font-size: 30px;    
+     text-align: center;
+}
+
+/* -------------about_the author-------- */
+
+.author_main{
+     font-size: 30px;
+    text-align: center;
+    margin: 40px 5px;
+    padding: 18px 0px;
+    background-color: rgb(26, 23, 23);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.author_main>span{
+     color: yellow;
+     font-family: 'Rock Salt', cursive;
+}
+
+.author_div_1>img{
+     border: 3px solid yellow;
+     border-radius: 132px;
+}
+.author{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     
+     padding: 10px 10px;
+     margin: 30px 11px;
+}
+
+.author_div_2{
+     font-size: 20px;
+     width: 600px;
+     padding: 10px 10px;
+     font-style: italic;
+
+}
+
+/* ------------sitemap------------ */
+
+.sitemap{
+     display: flex;
+     justify-content: space-evenly;
+     padding: 70px 10px;
+     /* margin: 10px 10px; */
+     font-size: 20px;
+     background-color: rgb(251, 239, 215);
+}
+.sitemap_div>ul>li{
+     margin: 17px;
+}
+.sitemap_div>ul>li>a:hover{
+     color: red;
+     font-weight: bold;
+}
+
+/* ----------footer---------- */
+
+.footer{
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     border-top: 4px solid rgb(173, 160, 160);
+     margin: 0px;
+     padding: 47px 10px;
+     background-color: rgb(251, 239, 215);
+     font-size: 20px;
+     font-weight: bold;
+}
+#social_media{
+     display: flex;
+
+}
