@@ -1,14 +1,21 @@
 const express = require("express");
 const app = express();
+const hbs = require("hbs")
 const port = 8000;
 const path = require("path");
 // const mongo = require("./db/connection")
 const static_path= path.join(__dirname,"/public")
-const hbs_path= path.join(__dirname,"views")
+const hbs_views_path= path.join(__dirname,"/templates/views")
+const partial_path= path.join(__dirname,"/templates/partials")
 // const Student = require("./models/student")
+
+
 app.use(express.static(static_path))
 app.set('view engine', 'hbs');
-app.set("views",hbs_path)
+app.set("views",hbs_views_path);
+
+hbs.registerPartials(partial_path);
+
 app.get("/",(req,res)=>{
      res.render("index")
 })
@@ -18,14 +25,17 @@ app.get("/about",(req,res)=>{
 app.get("/courses",(req,res)=>{
      res.render("courses")
 })
-app.get("supportus",(req,res)=>{
+app.get("/supportus",(req,res)=>{
      res.render("supportus")
 })
-app.get("owner",(req,res)=>{
+app.get("/owner",(req,res)=>{
      res.render("owner")
 })
-app.get("logIn",(req,res)=>{
-     res.render("logIn")
+app.get("/login",(req,res)=>{
+     res.render("login")
+})
+app.get("/create_account",(req,res)=>{
+     res.render("create_account")
 })
 app.get("*",(req,res)=>{
      res.render("error404")
