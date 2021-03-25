@@ -16,8 +16,13 @@ const studentSchemea = new mongoose.Schema({
             required:true,
             unique:true
             
+       },
+       phone:{
+            type:Number,
+            requred:true,
+            unique:true
        }
 
 })
-const Student = new mongoose.model("Student", studentSchemea)
+const Student = new mongoose.model("Users", studentSchemea)
 module.exports=Student

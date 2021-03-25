@@ -1,6 +1,8 @@
 const mongoose= require("mongoose");
-mongoose.connect("mongodb://localhost:27017/aktu-student", {
-     useNewUrlParser:true,useUnifiedTopology:true, useCreateIndex:true
+const DB = "mongodb+srv://tusharkushwaha:Tushar@cluster0.se7tl.mongodb.net/aktu_quantum_db?retryWrites=true&w=majority" 
+
+mongoose.connect(DB, {
+     useNewUrlParser:true,useUnifiedTopology:true, useCreateIndex:true,useFindAndModify:false
 }).then(()=>{
      console.log("Connection succesful");
 }).catch(()=>{

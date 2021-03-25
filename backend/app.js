@@ -3,12 +3,15 @@ const app = express();
 const hbs = require("hbs")
 const port = 8000;
 const path = require("path");
-// const mongo = require("./db/connection")
+const mongo = require("./db/connection")
+const dotenv= require("dotenv");
+
+
 const static_path= path.join(__dirname,"/public")
 const hbs_views_path= path.join(__dirname,"/templates/views")
 const partial_path= path.join(__dirname,"/templates/partials")
-// const Student = require("./models/student")
-
+const Student = require("./models/student.js")
+// dotenv.config({path:"./config.env"})
 
 app.use(express.static(static_path))
 app.set('view engine', 'hbs');
