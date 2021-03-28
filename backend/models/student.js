@@ -6,7 +6,7 @@ const studentSchemea = new mongoose.Schema({
             required:true,
             
        },
-       age:{
+       date:{
             type:Number,
             min:18,
             required:true
@@ -17,12 +17,12 @@ const studentSchemea = new mongoose.Schema({
             unique:true
             
        },
-       phone:{
-            type:Number,
+       password:{
+            type:String,
             requred:true,
             unique:true
        }
 
 })
-const Student = new mongoose.model("Users", studentSchemea)
+const Student = new mongoose.model("User", studentSchemea)
 module.exports=Student

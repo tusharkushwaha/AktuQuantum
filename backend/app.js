@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs")
-const port = 8000;
+const port = process.env.PORT || 8000;
 const path = require("path");
 const mongo = require("./db/connection")
 const dotenv= require("dotenv");
@@ -14,6 +14,7 @@ const Student = require("./models/student.js")
 // dotenv.config({path:"./config.env"})
 
 app.use(express.static(static_path))
+app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'hbs');
 app.set("views",hbs_views_path);
 
@@ -39,6 +40,22 @@ app.get("/login",(req,res)=>{
 })
 app.get("/create_account",(req,res)=>{
      res.render("create_account")
+})
+app.post("/register",(req,res)=> {
+     const student = new Student(req.body);
+     
+     student.save()
+     .then((result)=>{
+         
+          res.redirect("/login")
+          console.log("success");
+     }).catch((err)=>{
+          
+          res.redirect("/create_account")
+          console.log("failed");
+          console.log(err);
+     })
+      
 })
 app.get("*",(req,res)=>{
      res.render("error404")
